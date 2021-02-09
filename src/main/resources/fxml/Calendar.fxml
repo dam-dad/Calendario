@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="view" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<BorderPane BorderPane.alignment="CENTER">
+			<left>
+				<Button mnemonicParsing="false" onAction="#onPreviousButtonAction" styleClass="changeButton" text="&lt;" BorderPane.alignment="CENTER" />
+			</left>
+			<right>
+				<Button mnemonicParsing="false" onAction="#onNextButtonAction" styleClass="changeButton" text="&gt;" BorderPane.alignment="CENTER" />
+			</right>
+			<center>
+				<Label fx:id="yearLabel" styleClass="year" text="&lt;Año&gt;" BorderPane.alignment="CENTER" />
+			</center>
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+		</BorderPane>
+	</top>
+	<padding>
+		<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+	</padding>
+	<center>
+		<GridPane fx:id="monthsPane" hgap="5.0" minHeight="0.0" minWidth="0.0" vgap="5.0" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+				<ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+				<ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+				<ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+				<RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+				<RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+			</rowConstraints>
+		</GridPane>
+	</center>
+</BorderPane>
